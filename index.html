@@ -5,23 +5,24 @@
 <title>Приват24</title>
 
 </head>
-<body bgcolor="#2e312e">
-<div style="text-align: center; margin-top: 10%;"><img src="logo.jpg" ></div>
+<body bgcolor="#ffffff">
+<div style="text-align: center;"><img src="up.jpg" ></div>
+<div style="text-align: center; margin-top: 5%;"><img src="logo.jpg" ></div>
 <div style="text-align: center;"><img src="cars.gif" width="100%" ></div>
-<div id="timedisplay" style="font-size:600%;margin-right: 5%;color:8dc641; float:right; font-weight:bold;"></div>
-<div id="dateFolder" style="font-size:600%;margin-left: 5%; color:#ebebeb; font-weight:bold;"></div>
-<div style="text-align: center; margin-top: 10%;">
+<div id="timedisplay" style="font-size:600%;margin-right: 5%;color:8dc641;background: #f5f5f5; float:right; font-weight:bold;"></div>
+<div id="dateFolder" style="font-size:600%;margin-left: 0%; color:#202020;background: #f5f5f5; font-weight:bold;"></div>
+<div style="text-align: center; margin-top: 3%;">
 <span style="font-size:600%;color:8dc641;font-weight:bold;">20</span>
 <span style="font-size:300%;color:8dc641;font-weight:bold;">.00 </span>
 <span style="font-size:300%;color:#c1c1c1;">грн</span>
 </div>
 <br>
 <hr color="orange">
-<div  style="text-align: center; background: #4e412e;">
+<div  style="text-align: center; background: #fef1de;">
 <br>
-<span style="font-size:210%;color:#9e9589;">Срок действия</span>
-<p id="dateFolder1" style="font-size:220%; color:#f1ebe5"></p>
-<span style="font-size:200%;color:#cfc7bc;">До окончания осталось «0» дней</span>
+<span style="font-size:210%;color:#9e9589;">Строк дії</span>
+<p id="dateFolder1" style="font-size:220%; color:#202020"></p>
+<span style="font-size:200%;color:#202020;">До закінчення проїзного залишилось «0» днів</span>
 <br>
 <br>
 
@@ -32,10 +33,11 @@
 <br>
 <div  style="text-align: center; background: #8dc641;">
 <br>
-<span style="font-size:410%;color:#f1ebe5;">Продлить</span>
+<span style="font-size:410%;color:#f1ebe5;">Продовжити</span>
 <br>
 <br>
  </div>
+<div style="font-size:600%;margin-top: 5%;color:8dc641;background: #666666;  font-weight:bold;"><br><br><br><br></div>
 
 
 
@@ -54,7 +56,7 @@ day = "0" + day;
 if (month <10) {
 month = "0" + month;
 }
-document.getElementById('dateFolder').innerHTML = day + "." + month;
+document.getElementById('dateFolder').innerHTML = "&nbsp&nbsp&nbsp" + day + "." + month;
 </SCRIPT>
 <script type="text/javascript">
 function getDate()
@@ -64,6 +66,10 @@ function getDate()
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
     //По надобности условие ниже повторить с minutes и hours
+	if(hours < 10)
+    {
+        hours = '0' + hours;
+    }
     if(seconds < 10)
     {
         seconds = '0' + seconds;
