@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мій проїзний</title>
     <style>
+        @font-face {
+            font-family: 'DniproCity';
+            src: url('DniproCity.woff2') format('woff2'),
+                 url('DniproCity.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f5fa;
+            font-family: 'DniproCity', Arial, sans-serif;
+            background-color: #edf7ff;
             padding: 20px;
             text-align: center;
         }
@@ -25,6 +32,12 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
         }
         .button {
             background: white;
@@ -34,10 +47,21 @@
             font-size: 16px;
             cursor: pointer;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            margin-left: 0;
+        }
+        .button img {
+            width: 25px;
+            height: 25px;
+            margin-bottom: 5px;
         }
         .ticket-card {
             background: white;
-            padding: 20px;
+            padding: 60px;
             margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -57,22 +81,28 @@
             display: block;
             width: 20px;
             height: 20px;
-            background-color: gold;
-            border-radius: 5px;
+            background-image: url(ico4.png);
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">🚋 Мій проїзний</div>
-        <div class="button">📅 Придбати проїзний</div>
+        <div class="header">
+            <img src="ico1.png" alt="Трамвай">
+            Мій проїзний
+        </div>
+        <div class="button">
+            <img src="ico2.png" alt="Календар">
+            <span>Придбати проїзний</span>
+        </div>
         <h2>Придбані проїзні</h2>
         <div class="ticket-card">
-            <h3>Абонемент</h3>
+            <img src="ico3.png" alt="Трамвай"><h3 style=color:grey;>Абонемент</h3>
             <p><strong>Дніпро</strong></p>
-            <p>КП Дніпровський електротранспорт ДМР</p>
-            <p>Залишилось діб: <strong>30</strong></p>
-            <p>Номер: <strong>999999999</strong></p>
+            <p><strong>КП Дніпровський електротранспорт ДМР</strong></p>
+            <p style=color:grey;>Залишилось діб: <strong style=color:black;>               20</strong></p>
+            <p>Номер: <strong>               000007989</strong></p>
             <div class="icon-grid">
                 <!-- 20 иконок автобуса -->
                 <span></span><span></span><span></span><span></span><span></span>
@@ -80,7 +110,8 @@
                 <span></span><span></span><span></span><span></span><span></span>
                 <span></span><span></span><span></span><span></span><span></span>
             </div>
-            <p><strong>Вартість: 600 UAH</strong></p>
+			<br><br>
+            <p style=color:grey;><strong>    Вартість | 600 UAH</strong></p>
         </div>
     </div>
 </body>
