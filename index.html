@@ -22,12 +22,51 @@
             max-width: 400px;
             margin: auto;
         }
+		 .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #edf7ff;
+            padding: 10px 0;
+          
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1000;
+        }
+        .bottom-bar .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            font-size: 14px;
+        }
+        .bottom-bar img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+		.top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #edf7ff;
+            padding: 10px 20px;
+            font-size: 14px;
+           
+            color: #007BFF;
+            
+            z-index: 1000;
+            text-align: left;
+        }
         .header {
             background: white;
             padding: 15px;
             border-radius: 10px;
             font-size: 20px;
-            font-weight: bold;
+           
             display: flex;
             align-items: center;
             justify-content: left;
@@ -35,8 +74,8 @@
             position: relative;
         }
         .header img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             margin-right: 10px;
         }
         .button {
@@ -55,17 +94,25 @@
             margin-left: 0;
         }
         .button img {
-            width: 25px;
-            height: 25px;
+            width: 40px;
+            height: 40px;
             margin-bottom: 5px;
         }
-        .ticket-card {
+          .ticket-card {
             background: white;
-            padding: 60px;
+            padding: 20px 70px;
             margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: left;
+            position: relative;
+        }
+		.ticket-card img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 53px;
+            height: 64px;
         }
         .ticket-card h3 {
             margin: 0;
@@ -87,6 +134,7 @@
     </style>
 </head>
 <body>
+<div class="top-bar"> ← Головна</div><br><br>
     <div class="container">
         <div class="header">
             <img src="ico2.png" alt="Трамвай">
@@ -96,7 +144,7 @@
             <img src="ico2.png" alt="Календар">
             <span>Придбати проїзний</span>
         </div>
-        <h2>Придбані проїзні</h2>
+        <h4 style=text-align:left;>Придбані проїзні</h4>
         <div class="ticket-card">
             <img src="ico3.png" alt="Трамвай"><h3 style=color:grey;>Абонемент</h3>
             <p><strong>Дніпро</strong></p>
@@ -112,6 +160,24 @@
             </div>
 			<br><br>
             <p style=color:grey;><strong>    Вартість | 600 UAH</strong></p>
+        </div>
+    </div>
+	<div class="bottom-bar">
+        <div class="menu-item">
+            <img src="ico6.png" alt="Меню">
+            <span>Головна</span>
+        </div>
+        <div class="menu-item">
+            <img src="ico7.png" alt="Меню">
+            <span>Сервіси</span>
+        </div>
+        <div class="menu-item">
+            <img src="ico8.png" alt="Меню">
+            <span>Документи</span>
+        </div>
+        <div class="menu-item">
+            <img src="ico9.png" alt="Меню">
+            <span>Акаунт</span>
         </div>
     </div>
 </body>
