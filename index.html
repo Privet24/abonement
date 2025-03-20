@@ -22,17 +22,6 @@
             max-width: 400px;
             margin: auto;
         }
-		a {
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
-  color: black;
-}
-
-		 .cont {
-            display: flex;
-			flex-direction: row;
-        }
 		 .bottom-bar {
             position: fixed;
             bottom: 0;
@@ -84,24 +73,12 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-		 .header2 {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 20px;
-           
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
         .header img {
             width: 40px;
             height: 40px;
             margin-right: 10px;
         }
-        .button {
+       .button {
             background: white;
             padding: 10px;
             border-radius: 10px;
@@ -118,6 +95,12 @@
 			margin-right: 5px;
 			height:70px;
         }
+		a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  color: black;
+}
         .button img {
             width: 40px;
             height: 40px;
@@ -125,8 +108,8 @@
         }
           .ticket-card {
             background: white;
-            padding: 1px 70px;
-            margin-top: 15px;
+            padding: 20px 70px;
+            margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: left;
@@ -143,33 +126,7 @@
             margin: 0;
             color: #333;
         }
-		.ticket-card h6 {
-		word-spacing: 1px;
-		line-height:3px;
-		padding: 3px;
-            margin: 0;
-            font-weight:500;
-			
-        }
-		.ticket-card h4 {
-		text-align: center;
-		font-weight:500;
-		}
-		.ticket-card h2 {
-		margin-top: 1px;
-		text-align: center;
-		font-weight:600;
-		color:#344d90;
-		word-spacing: 1px;
-		line-height:2px;
-		}
-		.ticket-card h5 {
-		word-spacing: 1px;
-		text-align: center;
-		color:#737980;
-		font-weight:500;
-		}
-        .icon-grid {
+     .icon-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 5px;
@@ -178,154 +135,31 @@
         }
         .icon-grid span {
             display: block;
-            width: 25px;
+            width: 24px;
             height: 25px;
-            background-image: url(ico11.png);
+            background-image: url(ico4.png);
             border-radius: 4px;
         }
-		  .timestamp {
-            font-size: 14px;
-            text-align: center;
-            color: #666;
-            margin-top: 5px;
     </style>
-	<script type="text/javascript">
-function getDate()
-{
-temp_date = new Date();
-day = temp_date.getDate();
-month = temp_date.getMonth() + 1;
-year = temp_date.getFullYear();
-if (day < 10) {
-day = "0" + day;
-}
-if (month ==3) {
-month = "берез.";
-}
-if (month ==1) {
-month = "січ.";
-}
-if (month ==2) {
-month = "лют.";
-}
-if (month ==4) {
-month = "квіт.";
-}
-if (month ==5) {
-month = "трав.";
-}
-if (month ==6) {
-month = "черв.";
-}
-if (month ==7) {
-month = "лип.";
-}
-if (month ==8) {
-month = "серп.";
-}
-if (month ==9) {
-month = "верес.";
-}
-if (month ==10) {
-month = "жовт.";
-}
-if (month ==11) {
-month = "лист.";
-}
-if (month ==12) {
-month = "груд.";
-}
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes()-2;
-    var seconds = date.getSeconds();
-    //По надобности условие ниже повторить с minutes и hours
-	if(hours < 10)
-    {
-        hours = '0' + hours;
-    }
-    if(seconds < 10)
-    {
-        seconds = '0' + seconds;
-    }
-		if(minutes < 2)
-    {
-        minutes = minutes+2;
-    }
-	if(minutes < 10)
-    {
-        minutes = '0' + minutes;
-    }
-	
-    document.getElementById('timedisplay').innerHTML = day + ' ' + month + ' ' + year + ' р. | ' + hours + ':' + minutes ;
-}
-setInterval(getDate, 0);
-</script>
-	 <script>
-        function startCountdown() {
-            let time = 60 * 60;
-            const countdownElement = document.getElementById("countdown");
-            function updateCountdown() {
-                const minutes = Math.floor(time / 60);
-                const seconds = time % 60;
-                countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-                if (time > 0) {
-                    time--;
-                    setTimeout(updateCountdown, 1000);
-                }
-            }
-            updateCountdown();
-        }
-		 function submitValue() {
-            const inputField = document.getElementById("userInput");
-            const value = inputField.value;
-            if (value) {
-                document.getElementById("submittedValue").textContent = value;
-                document.getElementById("inputContainer").style.display = "none";
-            }
-        }
-        window.onload = startCountdown;
-    </script>
 </head>
 <body>
 <div class="top-bar"><b>← Головна</b> </div><br><br>
     <div class="container">
         <div class="header">
-            <img src="ico1.png" alt="Трамвай">
-            Транспорт
+            <img src="ico2.png" alt="Трамвай">
+            Мій проїзний
         </div>
-        
-		 <div class="cont">
-		 <div class="button">
-            <img src="ico14.png" alt="Архів">
-            <span>QR сканер</span>
-        </div>
-		<div class="button">
-            <img src="ico15.png" alt="Календар">
-            <span>Архів квитків</span>
-        </div>
-		</div> <div class="cont">
-		  <a href="http://privet24.github.io/abonement" class="button">
-		 
+        <a href="http://privet24.github.io/ticket" class="button">
             <img src="ico2.png" alt="Календар">
-            <span>Мій проїзний</span>
+            <span>Придбати проїзний</span>
         </a>
-		<div class="button">
-            <img src="ico15.png" alt="Календар">
-            <span>Мої штрафи</span>
-        </div>
-		</div>
-        
+        <h4 style=text-align:left;>Придбані проїзні</h4>
         <div class="ticket-card">
-            <img src="ico3.png" alt="Трамвай">
-            <h6><p>Дніпро</p>
-            <p>КП Дніпровський </p>
-			<p>електротранспорт ДМР</p>
-			<p>Серія ААА055987</p>
-			<p>Код TR01156</p></h6>
-            
-			<h4><div class="countdown" id="countdown"><h4>60:00</div></h4>
-          
+            <img src="ico3.png" alt="Трамвай"><h3 style=color:grey;>Абонемент</h3>
+            <p><strong>Дніпро</strong></p>
+            <p><strong>КП Дніпровський електротранспорт ДМР</strong></p>
+            <p style=color:grey;>Залишилось діб: <strong style=color:black;>          20</strong></p>
+            <p>Номер: <strong>          000007989</strong></p>
             <div class="icon-grid">
                 <!-- 20 иконок автобуса -->
                 <span></span><span></span><span></span><span></span><span></span>
@@ -333,23 +167,10 @@ setInterval(getDate, 0);
                 <span></span><span></span><span></span><span></span><span></span>
                 <span></span><span></span><span></span><span></span><span></span>
             </div>
-			
-			<h5><div id="timedisplay"></div></h5>
-			<p style=line-height:3px;><h5>Бортовий номер</h5><h2><p id="submittedValue"></p></h2></p>
-			
-            <h4>Вартість | 10 UAH</h4>
-			
-			 
-            <div class="input-container" id="inputContainer">
-                <input type="number" id="userInput" placeholder="Введіть число">
-                <button onclick="submitValue()">Відправити</button>
-            </div>
+			<br><br>
+            <p style=color:grey;><strong>    Вартість | 600 UAH</strong></p>
         </div>
-		 <a href="http://privet24.github.io" class="header2">
-		  
-		<img style=  height=50% width=60% src="ico13.png"  alt="Гугл"></a>
     </div><br><br><br><br>
-	
 	<div class="bottom-bar">
         <div class="menu-item">
             <img src="ico6.png" alt="Меню">
